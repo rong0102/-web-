@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1091610</title>
+</head>
+<style>
+body {
+        font-family: consolas, 'Microsoft JhengHei';
+}
+
+table {
+        margin: 7.5vh auto 0 auto;
+}
+
+table caption {
+	font-weight: bold;
+	margin-bottom: 32px;
+	font-size: 5vmin;
+}
+table th,td {
+	text-align: center;
+	padding: 8px 24px;
+}
+
+body > div {
+	margin-top: 32px;
+}
+
+body > div:nth-of-type(1) p {
+	text-align: center;
+	font-weight: bold;
+}
+
+body > div:nth-of-type(2) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+body > div:nth-of-type(2) > div {
+	width: 15%;
+}
+
+body > div:nth-of-type(2) > div:not(:first-of-type) {
+	margin-left: 10%;
+}
+
+button {
+	width: 100%;
+	height: 64px;
+	font-size: x-large;
+	cursor: pointer;
+	border-radius: 10px;
+	background-color: rgba(221, 221, 221, 0.603);
+}
+
+button:hover {
+	background-color: rgb(165, 255, 255);
+}
+
+button:focus {
+	outline: none;
+}
+
+.firework {
+	animation: shiny 0.25s infinite;
+}
+
+@keyframes shiny {
+	0% {
+		background: red;
+	}
+	25% {
+		background: orange;
+	}
+	50% {
+		background: greenyellow;
+	}
+	75% {
+		background: skyblue;
+	}
+	100% {
+		background: blue;
+		color: whitesmoke;
+	}
+}
+
+</style>
+<body >
+    
+
+	<script>
+
+		
+			var  r1 = "";
+			var temp="";
+			//table
+			r1 += "<table border=1><caption onmouseover='cover()'  onmouseout='cout()'>九九乘法表</caption>"
+			r1 += "<thead>\n<tr>\n"
+			for ( var i = 1; i < 10; i++) {
+
+				r1 += "<th>" + i + "</th>\n"
+			}
+			r1 += "</tr>\n</thead>\n"
+			r1 += "<tbody>\n"
+			for ( var i = 1; i < 10; i++) {
+				
+				r1 += "<tr >"
+				for (j = 1; j < 10; j++) {
+					
+					r1 += "<td  onmouseover='mover(this)' onmouseout='mout(this)' onmousedown=' mdown()' onmouseup='mup(this)'>" + j + "X" + i + "=" + i * j + "</td>";
+
+				}
+				r1 += "</tr>\n"
+
+
+
+
+				
+				
+			}
+
+			r1 += "</tbody>\n</table>"
+			//---button
+			r1+="<div><p>"+"點選 column 試試看"+"</p></div>"
+			r1+="<div >"
+			r1+="<div ><button onmouseover='btnover(this)' onmouseout='btnout(this)'>3</button></div>"
+			r1+="<div ><button onmouseover='btnover(this)' onmouseout='btnout(this)'>7</button></div>"
+			r1+="<div ><button onmouseover='btnover(this)' onmouseout='btnout(this)'>12</button></div>"
+			r1+= "</div>"
+			document.getElementsByTagName("body")[0].innerHTML=r1;
+		
+
+		
+			
+			
+		
+//---------------------------------------------------------------------------------------------------------
+			
+		
+			function mover(obj) {
+				
+				temp=obj.innerHTML;
+				obj.innerHTML="1091610";
+				obj.style.background="lightskyblue";
+
+				var parent= obj.parentElement;//tr 變黃
+				parent.style.background="yellow";
+				
+			}
+
+			function mout(obj) {
+
+				var parent = obj.parentElement;
+				parent.style.background = "none"
+
+
+				obj.style.background = "none";
+				obj.innerHTML = temp;
+			}
+			function mdown() {
+				document.getElementsByTagName("p")[0].innerHTML ="現在點選的是: " + temp;
+						
+			}
+			function mup() {
+				document.getElementsByTagName("p")[0].innerHTML = "點選 column 試試看";
+			}
+
+			function btnover(obj){
+				var btn=parseInt(obj.innerHTML);//把button內的innerHTML轉成整數
+				var x=document.getElementsByTagName("td");
+				for(var i=0;i<81;i++){
+					const num=parseInt(x[i].innerHTML.split("=")[1]);//3*4=12 從等號後面
+					if(num%btn==0){                                  //    01因為皆為二位數取到1
+						x[i].style="background-color:lightyellow; color:lightyellow;";
+					}
+				}
+			}
+			function btnout(obj){//button
+				var btn=parseInt(obj.innerHTML);
+				var x=document.getElementsByTagName("td");
+				for(var i=0;i<81;i++){
+					const num=parseInt(x[i].innerHTML.split("=")[1]);
+					if(num%btn==0){
+						x[i].style="none";
+					}
+				}
+			}
+			
+			function cover(){//caption
+				var x=document.getElementsByTagName("td");
+				for(var i=0;i<x.length;i++){
+					if(Math.random()>=0.75){
+						x[i].className="firework";
+					}
+				}
+			}
+			function cout(){
+				var x=document.getElementsByTagName("td");
+				for(var i=0;i<x.length;i++){
+					x[i].classList.remove("firework");//class刪掉
+				}
+			}
+				
+
+	</script>
+
+
+
+
+</body>
+</html>

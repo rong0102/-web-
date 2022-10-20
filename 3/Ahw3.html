@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW3-AB-Q</title>
+    <style>
+      /* css 擺放區 */
+      body {
+        font-family: consolas, "Microsoft JhengHei";
+      }
+
+      table {
+        margin: 7.5vh auto 0 auto;
+      }
+
+      table caption {
+        font-weight: bold;
+        margin-bottom: 32px;
+        font-size: 5vmin;
+      }
+      table th,
+      td {
+        text-align: center;
+        padding: 8px 24px;
+      }
+
+      body > div {
+        margin-top: 32px;
+      }
+
+      body > div:nth-of-type(1) p {
+        text-align: center;
+        font-weight: bold;
+      }
+
+      body > div:nth-of-type(2) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      body > div:nth-of-type(2) > div {
+        width: 15%;
+      }
+
+      body > div:nth-of-type(2) > div:not(:first-of-type) {
+        margin-left: 10%;
+      }
+
+      button {
+        width: 100%;
+        height: 64px;
+        font-size: x-large;
+        cursor: pointer;
+        border-radius: 10px;
+        background-color: rgba(221, 221, 221, 0.603);
+      }
+
+      button:hover {
+        background-color: rgb(165, 255, 255);
+      }
+
+      button:focus {
+        outline: none;
+      }
+
+      .firework {
+        animation: shiny 0.25s infinite;
+      }
+
+      @keyframes shiny {
+        0% {
+          background: red;
+        }
+        25% {
+          background: orange;
+        }
+        50% {
+          background: greenyellow;
+        }
+        75% {
+          background: skyblue;
+        }
+        100% {
+          background: blue;
+          color: whitesmoke;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Javascript 作答區
+      var html_table = "";
+      var style_tenp = "";
+      html_table += "<table border=1>\n";
+      html_table +=
+        '<caption onmouseover="capover(this)" onmouseout="capout(this)">九九乘法表</caption>';
+      html_table += "<thead><tr>";
+      for (var i = 1; i < 10; i++) {
+        html_table += "<th>" + i;
+      }
+      html_table += "</tr></thead>";
+      html_table += "<tbody>";
+      for (var i = 1; i < 10; i++) {
+        var counter = 0;
+        html_table +=
+          '<tr>';
+        for (var j = 1; j < 10; j++) {
+          var sum = i * j;
+          html_table +=
+            '<td onmouseover="tdover(this)" onmouseout="tdout(this)" onmousedown="tddown()" onmouseup="tdup(this)">';
+          html_table += j + "x" + i + "=" + sum + "</td>";
+        }
+        html_table += "</tr>";
+      }
+      html_table += "</table>";
+
+      html_table += "<div><p>" + "點選 column 試試看" + "</p></div>";
+      html_table += "<div>";
+      html_table +=
+        '<div><button id="mybtn5" onmouseover="btnover(this)" onmouseout="btnout(this)">' +
+        "3" +
+        "</button></div>";
+      html_table +=
+        '<div><button id="mybtn5" onmouseover="btnover(this)" onmouseout="btnout(this)">' +
+        "7" +
+        "</button></div>";
+      html_table +=
+        '<div><button id="mybtn5" onmouseover="btnover(this)" onmouseout="btnout(this)">' +
+        "12" +
+        "</button></div>";
+      html_table += "</div>";
+      document.getElementsByTagName("body")[0].innerHTML = html_table;
+      //TD===Function===================================================================================
+      function tdover(n) {
+        style_tenp = n.innerHTML;
+        n.innerHTML = "000000";
+        n.style.background = "skyblue";
+
+        var parent = n.parentElement;
+        parent.style.background = "yellow";
+      }
+      function tdout(n) {
+        var parent = n.parentElement;
+        parent.style.background = "none";
+
+        n.style.background = "none";
+        n.innerHTML = style_tenp;
+      }
+      function tddown() {
+        document.getElementsByTagName("p")[0].innerHTML =
+          "現在點選的是: " + style_tenp;
+      }
+      function tdup() {
+        document.getElementsByTagName("p")[0].innerHTML = "點選 column 試試看";
+      }
+      //BTN===Function===================================================================================
+      function btnover(n) {
+        var btn = parseInt(n.innerHTML);
+        var numbers = document.getElementsByTagName("td");
+        for (i = 0; i < 81; i++) {
+          const num = parseInt(numbers[i].innerHTML.split("=")[1]);
+          if (num % btn == 0) {
+            numbers[i].style =
+              "background-color: lightyellow; color: lightyellow;";
+          }
+        }
+      }
+      function btnout(n) {
+        var btn = parseInt(n.innerHTML);
+        var numbers = document.getElementsByTagName("td");
+        for (i = 0; i < 81; i++) {
+          const num = parseInt(numbers[i].innerHTML.split("=")[1]);
+          if (num % btn == 0) {
+            numbers[i].style = "background-white: lightyellow; color: black;";
+          }
+        }
+      }
+      //CAP===Function===================================================================================
+      function capover() {
+        var choose = document.getElementsByTagName("td");
+        for (var i = 0; i < choose.length; i++) {
+          if (Math.random() >= 0.75) {
+            choose[i].className = "firework";
+          }
+        }
+      }
+      function capout() {
+        var choose = document.getElementsByTagName("td");
+        for (var i = 0; i < choose.length; i++) {
+          choose[i].classList.remove("firework");
+        }
+      }
+    </script>
+  </body>
+</html>
