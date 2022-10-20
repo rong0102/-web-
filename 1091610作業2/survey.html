@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Survey</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">    
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+    <style>
+
+	</style>
+
+	
+  <body background="images\bac5.jpg">
+	<div style="background-color:#D0D0D0" >
+		<div class="container" style="font-size:20px; padding: 5%">
+		<h2 style="font-size:25px" align="center">您最常聽音樂類型:</h2>
+			<div class="col-sm-4" >
+				<input type="radio" name="1" value="tp1"> 1.Classical 古典樂<br>
+				<input type="radio" name="2" value="tp2"> 2.Folk / Country 民歌／鄉村歌曲<br>
+				<input type="radio" name="3" value="3"> 3.(EDM) 電音
+			</div>
+			<div class="col-sm-4 col-sm-offest-4">
+				<input type="radio" name="4" value="tp4"> 4.Hip-hop / Rap 嘻哈樂／饒舌樂<br>
+				<input type="radio" name="5" value="tp5" checked> 5.Indie Rock 獨立音樂<br>
+				<input type="radio" name="6" value="tp6"> 6.R & B / Soul 節奏藍調／靈魂樂
+			</div>
+			<div class="col-sm-4col-sm-offset-8">
+				<input type="radio" name="7" value="tp7"> 7.Rock 搖滾音樂<br>
+				<input type="radio" name="8" value="tp8"> 8.Jazz/Blues 爵士樂／藍調<br>
+				<input type="radio" name="9" value="tp9" checked> 9.Pop 流行樂
+			</div>
+		</div>	
+	</div>
+	<br>
+		<hr style="background-color:white; height:3px; border:none"></hr>
+	</div>
+	<br>
+	<div  class="container" style="background-color:#FFEED; ">
+	
+	<div class="form-group;" style="font-size:20px;" class="container" >
+		<form>
+			<div class="container" style="font-size:20px;">
+				<h4>想推薦的音樂風格:</h4>
+				<select class="form-control" id="time">
+					<option value="1" selected>1~5hr
+					<option value="2">6~10hr
+					<option value="3">10hr以上
+				</select>
+			</div>
+		</form>
+	</div>
+		<form>
+		<div class="container" style="font-size:20px" style="color:white">
+		<h4 ><b>選擇聽音樂時段(可複選):</b></h4>
+			<input type="checkbox" name="choice" value="01" checked>讀書&nbsp;
+			<input type="checkbox" name="choice" value="02" >工作&nbsp;
+			<input type="checkbox" name="choice" value="03" >吃飯&nbsp;
+			<input type="checkbox" name="choice" value="04" >打掃&nbsp;
+			<input type="checkbox" name="choice" value="05" >洗澡&nbsp;
+			<input type="checkbox" name="choice" value="06" >煮飯&nbsp;
+			<input type="checkbox" name="choice" value="07" disabled>走路&nbsp;
+			<input type="checkbox" name="choice" value="08" >搭車
+		</div>
+	
+		</form>
+	</div>	
+	<br>
+	<hr style="background-color:white; height:3px; border:none"></hr>
+	<br>
+	<div style="background-color:#D0D0D0">
+		<div class="container" align="center">
+			<form>
+				<div style="font-size:15px">
+				<h4>填寫時間:</h4><input type="date"></div>
+				<div style="font-size:15px"><h4>聯絡郵件:</h4><input type="email"></div>
+				
+				
+				<br>
+			<div style="font-size:20px">
+				選擇想推薦的音樂風格:
+				<select class="form-control" id="time">
+					<option value="1" selected>Classical 古典樂
+					<option value="2">Folk / Country 民歌／鄉村歌曲
+					<option value="3">(EDM) 電音
+					<option value="3">Hip-hop / Rap 嘻哈樂／饒舌樂
+					<option value="3">Indie Rock 獨立音樂
+					<option value="3">6.R & B / Soul 節奏藍調／靈魂樂
+					<option value="3">Jazz/Blues 爵士樂／藍調
+					<option value="3">Pop 流行樂
+				</select>
+				<br>
+				<p>歌名與藝人:<br>
+				<input type="text"></p>
+				<br>
+				<p>想告訴我的話或是建議:<br>
+				<textarea></textarea></p>
+			</div>	
+				
+			</form>
+		</div>
+	</div><br>
+	<div align="center">
+	<button type="submit" class="btn btn-primary" >送出</button>
+	<button type="reset" class="btn btn-primary" >重新填寫</button>
+	</div>
+	<footer>
+	<h4 align="center"><a href="index.html"  style="color:black"><回首頁></a></h4>
+	</footer>
+  </body> 
+</html>

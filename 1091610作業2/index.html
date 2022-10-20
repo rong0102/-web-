@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+	 <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ENCOUNTER</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">    
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+    <style>
+	td{font-size:17px}
+	</style>
+  </head>
+  <body style="padding-top:50px">
+	<!--導覽列-->
+	  <nav class="navbar navbar-inverse navbar-fixed-top">
+	   <div class="container-fluid">
+		  <div class="navbar-header">
+			<a class="navbar-brand" href="index.html" style="font-size:25px"><b>ENCOUNTER&nbsp;<i class="fas fa-music"></i></b></a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+			<span class="sr-only"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			
+			</button>
+		  </div>
+		<div id="navbar" class="navbar-collapse collapse">
+
+			<ul class="nav navbar-nav" style="font-size:17px">
+                <li><a href="western.html" >西洋&nbsp;<i class="glyphicon glyphicon-headphones"></i></a></li>
+				<li><a href="korean.html">韓國音樂<i class="glyphicon glyphicon-headphones"></i></i></a></li>
+				<li><a href="survey.html">可愛小問卷<i class="glyphicon glyphicon-heart-empty"></i></i></a></li>
+				
+				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">網頁介紹<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="recommand.html">推薦網站</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="introduce.html">本站介紹</a></li>
+						</ul>
+				</li>
+				</ul>
+			</div>
+		</div>
+	 </nav>
+	 <!--輪播-->
+	 <div id="myCarousel" class="carousel slide" align="center">
+		<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+		<li data-target="#myCarousel" data-slide-to="3"></li>
+		<li data-target="#myCarousel" data-slide-to="4"></li>
+		</ol>
+	<div class="carousel-inner" role="listbox">
+		<div class="item active" >
+			<img src="images\001.jpg" width="60%" >
+			<div class="carousel-caption">
+			<h1>Aimer</h1>
+			</div>
+		</div>
+		<div class="item">
+			<img src="images\002.jpg" width="60%">
+			<div class="carousel-caption">
+			<h1>ONE OK ROCK</h1>
+			</div>
+		</div>
+		<div class="item">
+			<img src="images\003.jpg" width="72%">
+			<div class="carousel-caption">
+			<h1>YOASOBI<h1>
+			</div>
+		</div>
+		<div class="item">
+			<img src="images\004.jpg" width="60%">
+			<div class="carousel-caption">
+			<h1>米津玄師</h1>
+			</div>
+		</div>
+	</div>
+	<a class="carousel-control left" href="#myCarousel" data-slide="prev">
+	<span class="glyphicon glyphicon-chevron-left"></span></a>
+	<a class="carousel-control right" href="#myCarousel" data-slide="next">
+	<span class="glyphicon glyphicon-chevron-right"></span></a>
+	</div>
+	<!--標籤頁-->
+	
+	<div class="container" class="col-xs-12 col-lg-push-12">
+		<ul class="nav nav-tabs nav-justified" style="background:white"> 
+			<li class="active" font-color="yellow"><a href="#table1" data-toggle="tab" >關於</a></li>
+			<li><a href="#table2" data-toggle="tab">歌單</a></li>
+			<li><a href="#table3" data-toggle="tab">藝人</a></li>
+			<li><a href="#table4" data-toggle="tab">專輯</a></li>
+		</ul>
+	</div>
+	<div class="container-fluid" style="background:#F0F0F0">
+	<div class="container" class="col-xs-12 col-lg-push-12">
+	<div class="tab-content">
+	<!--標籤 關於-->
+		<div class="tab-pane fade in active" id="table1">
+		<p><h3><b>說明</b></h3></p>
+			<div>
+			<h4 style="line-height:100px">
+			嗨，我是沈千容，一位喜歡日本音樂的大學生。<br>
+			希望大家喜歡。<br>
+			聯絡我&nbsp;<i class="glyphicon glyphicon-envelope"></i>：s1091610@mail.yzu.edu.tw<br>
+			Information all from the Internet, and this website is none-profit. Just for my final project.</h4>
+			</div>
+		</div>
+
+		<!--標籤 歌單-->
+		<div class="tab-pane fade" id="table2">
+			 
+			<br>
+			<h2 align="center"><b>~近期常聽歌單~</b></h2>
+			<div class="justify-content-center">
+				<table class="table table-hover" style="line-height:100px">
+					<th style="font-size:19px; background-color:#D0D0D0">#</th>
+					<th style="font-size:19px; background-color:#D0D0D0">歌名</th>
+					<th style="font-size:19px; background-color:#D0D0D0">藝人</th>
+					<th style="font-size:19px; background-color:#D0D0D0">專輯</th>
+					<th style="font-size:19px; background-color:#D0D0D0">發行時間</th>
+					<th style="font-size:19px; background-color:#D0D0D0"><i class="glyphicon glyphicon-time"></i></th>
+					<tr>
+                    <td>1 <a href="https://www.youtube.com/watch?v=BbB8HxaiG8w"><i class="glyphicon glyphicon-play"></i></a></td>
+                    <td>Torches</td>
+                    <td>Aimer</td>
+                    <td>Torches</td>
+                    <td>2019-8-14</td>
+                    <td>4:53</td>
+					</tr>
+					<tr>
+                    <td>2 <a href="https://www.youtube.com/watch?v=SAHvDE9FFAE"><i class="glyphicon glyphicon-play"></i></a></td>
+                    <td>Liar</td>
+                    <td>ONE OK ROCK</td>
+                    <td>Niche Syndrome</td>
+                    <td>2010-6-9</td>
+                    <td>3:37</td>
+					</tr>
+					<tr>
+                    <td>3 <a href="https://www.youtube.com/watch?v=x8VYWazR5mE"><i class="glyphicon glyphicon-play"></i></a></td>
+                    <td>夜に駆ける</td>
+                    <td>Yoasobi</td>
+                    <td>夜に駆ける</td>
+                    <td>2019-12-14</td>
+                    <td>4:21</td>
+					</tr>
+					<tr>
+                    <td>4 <a href="https://www.youtube.com/watch?v=ony539T074w"><i class="glyphicon glyphicon-play"></i></a></td>
+                    <td>白日</td>
+                    <td>King Gnu</td>
+                    <td>CEREMONY</td>
+                    <td>2019-2-22</td>
+                    <td>4:35</td>
+					</tr>
+					<tr>
+                    <td>5 <a href="https://www.youtube.com/watch?v=4MoRLTAJY_0"><i class="glyphicon glyphicon-play"></i></a></td>
+                    <td>藍二乗</td>
+                    <td>ヨルシカ(yorushika)</td>
+                    <td>だから僕は音楽を辞めた</td>
+                    <td>2018-12-27</td>
+                    <td>4:08</td>
+					</tr>
+					<tr>
+                    <td>6 <a href="https://www.youtube.com/watch?v=bzUOXxJWzOY"><i class="glyphicon glyphicon-play"></i></a></td>
+                    <td>狂おしいほど僕には美しい</td>
+                    <td>majiko</td>
+                    <td>COLOR</td>
+                    <td>2019-1-23</td>
+                    <td>4:19</td>
+					</tr>
+					<tr>
+                    <td>7 <a href="https://www.youtube.com/watch?v=ec7H8oXiSSs"><i class="glyphicon glyphicon-play"></i></a></td>
+                    <td>生きていたんだよな</td>
+                    <td>愛繆</td>
+                    <td>生きていたんだよな</td>
+                    <td>2016-11-30</td>
+                    <td>3:14</td>
+					</tr>
+					<tr>
+                    <td>8 <a href="https://www.youtube.com/watch?v=1v5kssWT-DM"><i class="glyphicon glyphicon-play"></i></a></td>
+                    <td>Best Friend</td>
+                    <td>西野加奈</td>
+                    <td>To love</td>
+                    <td>2010-2-14</td>
+                    <td>5:20</td>
+					</tr>
+					<tr>
+                    <td>9 <a href="https://www.youtube.com/watch?v=6A79oX1aRoE"><i class="glyphicon glyphicon-play"></i></a></td>
+                    <td>Raspberry Lover</td>
+                    <td>秦基博</td>
+                    <td>Raspberry Lover</td>
+                    <td>2019-11-6</td>
+                    <td>3:42</td>
+					</tr>
+					<tr>
+                    <td>10 <a href="https://www.youtube.com/watch?v=iNMxn8Ib6jI"><i class="glyphicon glyphicon-play"></i></a></td>
+                    <td>さよならごっこ</td>
+                    <td>amazarashi</td>
+                    <td>Play Goodbye</td>
+                    <td>2019-2-13</td>
+                    <td>4:31</td>
+					</tr>
+					
+				</table>
+			</div>
+		</div>
+		<div class="tab-pane fade" id="table3">
+		<br>
+		<!--第一行-->
+			<div class="row text-center">
+				<div class="col-xs-4">
+					<img src="images\aimer.jpg" class="img-circle">
+					<div class="caption"></div>
+					<h4><b>Aimer</b></h4>
+					<p style="text-align:justify">
+					Aimer是一名日本女歌手，熊本縣出身。
+					其個人資料未對外公開披露。藝名Aimer取自法語詞彙「愛」，
+					作詞時常以aimerrhythm署名。</p>
+				</div>
+			<div class="col-xs-4">
+					<img src="images\kenshi.jpg"  class="img-circle">
+					<div class="caption"></div>
+					<h4><b>米津玄師</b></h4>
+					<p style="text-align:justify">米津玄師（ Yonezu Kenshi），
+					是出生於日本德島縣的男性音樂家、創作歌手、插畫家、
+					攝影師、舞者。</p>
+			</div>
+			<div class="col-xs-4">
+					<img src="images\Minami.jpg"  class="img-circle">
+					<div class="caption"></div>
+					<h4><b>美波</b></h4>
+					<p style="text-align:justify">
+					美波（みなみ），日本女性創作型歌手。2019年1月30日以单曲《カワキヲアメク》正式出道。</p>
+			</div>
+			</div>
+		<!--第二行-->
+		<br>
+			
+			<div class="row text-center">
+				<div class="col-xs-4">
+					<img src="images\yorushika.jpg" class="img-circle">
+					<div class="caption"></div>
+					<h4><b>ヨルシカ</b></h4>
+					<p style="text-align:justify">
+					Yorushika（日語：ヨルシカ）是由作曲家n-buna與歌手Suis組成的日本搖滾樂團。
+					該樂團於2017年建成，電吉他串出輕快洗腦的旋律，琅琅上口，獲得許多關注。
+					負責詞曲創作的 n-buna 擅長透過情境及心境的表現，
+					描繪出富含深意的世界觀，透過搭配 suis 清透的聲線，
+					讓樂曲情緒更加巧妙地被堆疊而出</p>
+				</div>
+			<div class="col-xs-4">
+					<a href="oor.html"><img src="images\one ok rock.jpg"  class="img-circle"></a>
+					<div class="caption"></div>
+					<h4><b>ONE OK　ROCK</b></h4>
+					<p style="text-align:justify">
+					日本搖滾樂團，
+					成立於2005年。由Taka、Toru、Ryota、Tomoya、Alex
+					五人組成的搖滾樂團（Alex於2009離團後為四人樂團）。
+					主唱TAKA的的咬字，非常清晰且標準，有別於大多數日本人，
+					且融合了日本搖滾和美式搖滾的詮釋，
+					讓喜歡日本搖滾編曲風格以及美國流行搖滾的人，能同時接收兩邊的刺激，
+					</p>
+			</div>
+			<div class="col-xs-4">
+					<img src="images\majiko.jpg"  class="img-circle">
+					<div class="caption"></div>
+					<h4><b>majiko</b></h4>
+					<p style="text-align:justify">
+					majiko（日語：まじ娘／まじこ），發跡於網路上的實力派日本女歌手，
+					以與生俱來的歌聲吸引著聽眾。 而近年來，作為創作歌手的她，不僅在日本，
+					海外出演的許多活動或是樂團表演都引起了許多關注。除了撰寫歌詞、
+					作曲和編曲外，也參與周邊商品和專輯封面插圖的創作。</p>
+			</div>
+		<!--第3行-->
+			<br>
+			</div>
+			<div class="row text-center">
+				<div class="col-xs-4">
+					<img src="images\amazarashi.jpg" class="img-circle">
+					<div class="caption"></div>
+					<h4><b>amazarashi</b></h4>
+					<p style="text-align:justify">縮寫AMZ。amazarashi是一個出道於日本青森縣[1]的搖滾樂隊，
+					樂隊名「amazarashi」是日語「雨曝し」的羅馬字，
+					因「倘若將日常之悲苦比作降雨，我們則曝身於雨中，
+					想把那『即使如此』這一點歌唱出來」而取此名。
+					樂隊的核心成員是秋田弘和豐川真奈美。</p>
+				</div>
+			<div class="col-xs-4">
+					<img src="images\Aimyon.jpg"  class="img-circle">
+					<div class="caption"></div>
+					<h4><b>Aimyon</b></h4>
+					<p style="text-align:justify">
+					來自日本兵庫縣西宮市的愛繆，
+					受到從事音樂相關工作的父親影響，國中時開始接觸作詞作曲。
+					藝名aimyon為同學取的綽號。無論是外貌妝感還是帶點厭世風的感覺，
+					皆與女演員小松菜奈非常相像。其強烈風格有著「中毒性歌姬」的外號，
+					一聽即上癮，無法自拔。</p>
+			</div>
+			<div class="col-xs-4">
+					<img src="images\RADWIMPS.jpg"  class="img-circle">
+					<div class="caption"></div>
+					<h4><b>RADWIMPS</b></h4>
+					<p style="text-align:justify">
+					簡稱為"RAD"
+					翻成中文叫『英雄懦夫』。
+					對「生命」持徹底的肯定態度，同時也反對「永恆之生」，
+					在多數的曲目中兩者對照鮮明。
+					歌曲中對社會的諷刺、六星占術及粗俗詞彙較多，且搖滾、
+					電子、饒舌、嘻哈等音樂元素在歌曲中均有體現。 </p>
+			</div>
+		<!--第4行-->
+		<br>
+			</div>
+			<div class="row text-center">
+				<div class="col-xs-4">
+					<img src="images\Suda Masaki.jpg" class="img-circle">
+					<div class="caption"></div>
+					<h4><b>菅田将暉</b></h4>
+					<p style="text-align:justify">
+					菅田將暉（Suda Masaki）是日本男演員、歌手，
+					出身自大阪府箕面市。2018年以25歲之齡成為日本影史第二年輕影帝，
+					26歲首封視帝，於出道10年時奪得雙料影帝、視帝，
+					更踏足音樂界，向影視歌三棲發展。</p>
+				</div>
+			<div class="col-xs-4">
+					<img src="images\Hata Motohiro.jpg"  class="img-circle">
+					<div class="caption"></div>
+					<h4><b>秦基博</b></h4>
+					<p style="text-align:justify">
+					秦基博（Hata Motohiro），日本男性創作歌手，日本環球音樂旗下藝人。
+					秦基博的歌聲具有打動人心、療癒穿透的能量，
+					「鋼鐵與玻璃所煉製的聲音」，在他的出道單曲側標如此形容，
+					溫暖清新、又昂揚有力是他聲音的特色，因此能夠在日本歌壇快速竄起。</p>
+			</div>
+			<div class="col-xs-4">
+					<img src="images\yoasobi.jpg"  class="img-circle">
+					<div class="caption"></div>
+					<h4><b>Yoasobi</b></h4>
+					<p style="text-align:justify">
+					YOASOBI是日本雙人音樂組合，
+					由使用VOCALOID的作曲家的Ayase與創作歌手ikura組成。
+					其特色為將在日本索尼音樂娛樂所經營的小說&
+					插畫網站monogatary.com中的原作小說音樂化</p>
+			</div>
+				
+			</div>
+		</div>
+		
+		<div class="tab-pane fade" id="table4" class="container">
+		</br>
+		<!--第一行-->
+		<div class="row">
+				<div class="col-xs-3">
+					<div class="thumbnail" >
+					<a class="btn btn-lg btn-green btn-cta" role="button" href="STRAYSHEEP.html">
+						<img src="images\01.jpg">
+					</a>
+						<h4 align="center">米津玄師-STRAY SHEEP</h4>
+					</div>
+				</div>
+			  <div class="col-xs-3">
+					<div class="thumbnail">
+					<a class="btn btn-lg btn-green btn-cta" role="button" href="#">
+						<img src="images\02.jpg">
+					</a>
+						<h4 align="center">米津玄師-BOOTLEG</h4>
+					</div>
+				</div>
+				<div class="col-xs-3">
+					<div class="thumbnail">
+					<a class="btn btn-lg btn-green btn-cta" role="button" href="#">
+						<img src="images\03.jpg">
+					</a>
+						<h4 align="center">OOR-Eye Of The Storm</h4>
+					</div>
+				</div>
+				<div class="col-xs-3">
+					<div class="thumbnail">
+					<a class="btn btn-lg btn-green btn-cta" role="button" href="#">
+						<img src="images\04.jpg">
+					</a>
+						<h4 align="center">OOR-Ambitions</h4>
+					</div>
+				</div>
+			</div>
+			<!--第2行-->
+		<div class="row">
+			<div class="col-xs-3">
+					<div class="thumbnail">
+					<a class="btn btn-lg btn-green btn-cta" role="button" href="#">
+						<img src="images\05.jpg">
+					</a>
+						<div class="caption"></div>
+						<h4 align="center">Yorushika-盜作</h4>
+					</div>
+			</div>
+				<div class="col-xs-3">
+					<div class="thumbnail">
+					<a class="btn btn-lg btn-green btn-cta" role="button" href="#">
+						<img src="images\06.jpg">
+					</a>
+						<h4 align="center">Yorushika-だから僕は音楽を辞めた</h4>
+					</div>
+				</div>
+				<div class="col-xs-3">
+					<div class="thumbnail">
+					<a class="btn btn-lg btn-green btn-cta" role="button" href="#">
+						<img src="images\07.jpg">
+					</a>
+						<h4 align="center">Yorushika-負け犬にアンコールはいらない</h4>
+					</div>
+				</div>
+				<div class="col-xs-3">
+					<div class="thumbnail">
+					<a class="btn btn-lg btn-green btn-cta" role="button" href="#">
+						<img src="images\08.jpg">
+					</a>
+						<div class="caption"></div>
+						<h4 align="center">Aimer-Torches</h4>
+					</div>
+				</div>
+		</div>
+		<!--第3行-->
+		<div class="row">
+				<div class="col-xs-3">
+					<div class="thumbnail">
+					<a class="btn btn-lg btn-green btn-cta" role="button" href="#">
+						<img src="images\09.jpg">
+					</a>
+						<h4 align="center">Aimer-daydream</h4>
+					</div>
+				</div>
+				<div class="col-xs-3">
+					<div class="thumbnail">
+					<a class="btn btn-lg btn-green btn-cta" role="button" href="#">
+						<img src="images\10.jpg">
+						</a>
+						<h4 align="center">菅田将暉-LOVE</h4>
+					</div>
+				</div>
+				<div class="col-xs-3">
+					<div class="thumbnail">
+					<a class="btn btn-lg btn-green btn-cta" role="button" href="#">
+						<img src="images\11.jpg">
+					</a>
+						<h4 align="center">RADWIMPS-Your Name</h4>
+					</div>
+				</div>
+				<div class="col-xs-3">
+					<div class="thumbnail">
+					<a class="btn btn-lg btn-green btn-cta" role="button" href="#">
+						<img src="images\12.jpg">
+					</a>
+						<h4 align="center">majiko-ひび割れた世界</h4>
+					</div>
+				</div>
+		</div>
+		</div>
+	</div>
+
+  </body> 
+</html>
+
+
+
+
+
