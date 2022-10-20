@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>A班 HW2</title>
+		<style>
+			/* css 作答區 */
+			* {
+	    		font-family: consolas, 'Microsoft JhengHei';
+			}
+
+			#container {
+					width: calc(100vw - 16px);
+					height: calc(100vh - 16px);
+					
+				}
+
+			#container > table {
+					width: 100%;
+					height: 80%;
+					text-align: center;
+					
+				}		
+	
+			.is_Prime_eig.anima{
+				animation: shiny 0.5s infinite;
+				text-decoration: line-through;
+				font-size:20px;
+				
+			}
+			.anima{
+				letter-spacing:3px;
+			}	
+	
+
+			@keyframes shiny {
+				0% {
+					background: red;
+				}
+				25% {
+					background: orange;
+				}
+				50% {
+					background: greenyellow;
+				}
+				75% {
+					background: skyblue;
+				}
+				100% {
+					background: blue;
+						color: whitesmoke;
+				}
+    		}
+			.fifthtimes{
+				background: lightyellow;
+				font-weight: bold;
+				color: red;
+			}
+	
+		</style>
+	</head>
+	<body>
+		<div id="container"></div>
+		<script>
+			// script 作答區
+			function alertCaption()
+			{
+			alert(document.getElementById("table1").caption.innerHTML);
+			}
+			function is_Prime(n) {
+				var p;
+				if (n == 1) {
+					return false;
+				}
+				for (p = 2; p < n; p++) {
+					if (n % p == 0) {
+						return false;
+					}
+				}
+				return true;
+			}
+
+			var i,j,r1="";
+			r1+="<table border=1 id=tabel1 ><caption>九九乘法表</caption>"
+			r1+="<thead>\n<tr>\n"
+			for(i=1;i<10;i++){
+				
+				r1+="<th>"+i+"</th>\n"
+			}
+			r1+="</tr>\n</thead>\n"
+			r1+="<tbody>\n"
+			for(i=1;i<10;i++){
+				r1+="<tr>"
+				for(j=1;j<10;j++){
+					if (is_Prime(i*j)|(i*j)%18==0) {
+						console.log(true)
+						if((i*j)%35==0){
+						r1+="<td class='fifthtimes is_Prime_eig anima'>1091610</td>\n"
+						}else if((i*j)%7==0){
+							r1+="<td class='is_Prime_eig anima'>1091610</td>\n"
+						}else if((i*j)%5==0){
+							r1+="<td class='fifthtimes'>"+j+" x "+i+" = "+ i*j+"</td>\n"
+						}else{
+							r1+="<td class='is_Prime_eig anima'>"+j+" x "+i +" = "+i*j+"</td>\n"
+						}
+					}else{
+						console.log(false)
+						if((i*j)%35==0){
+						r1+="<td class='fifthtimes'>1091610</td>\n"
+						}else if((i*j)%7==0){
+							r1+="<td>1091610</td>\n"
+						}else if((i*j)%5==0){
+							r1+="<td class='fifthtimes'>"+j+" x "+i+" = "+i*j+"</td>\n"
+						}else{
+							r1+="<td>"+j+" x "+i+" = "+i*j+"</td>\n"
+						}
+					}
+					
+				}
+				r1+="</tr>\n"
+			}
+			r1+="</tbody>\n</table>"
+			
+			document.getElementById("container").innerHTML=r1;
+		</script>
+	</body>
+</html>
